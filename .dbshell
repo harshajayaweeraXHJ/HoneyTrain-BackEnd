@@ -1,0 +1,27 @@
+quit
+db.imeitrip.insert({"imei":1234567,"starting":400,"ending":560,"tripid":123})
+db.stationtimes.insert({ 'trip':123,   'start':20, 'end': 24, 'times':[ {'station':21, 'reachtime':100700, "lat": 5.1, "lon": 0.51}, {'station':22, 'reachtime':101200, "lat": 10.1, "lon": 1.1}, {'station':23, 'reachtime':101700, "lat": 15.1, "lon": 1.51}, {'station':24, 'reachtime':102200, "lat": 35.1, "lon": 3.51}, ] })
+use honeydb
+db.imeitrip.insert({"imei":1234567,"starting":400,"ending":560,"tripid":123})
+db.stationtimes.insert({ 'trip':123,   'start':20, 'end': 24, 'times':[ {'station':21, 'reachtime':100700, "lat": 5.1, "lon": 0.51}, {'station':22, 'reachtime':101200, "lat": 10.1, "lon": 1.1}, {'station':23, 'reachtime':101700, "lat": 15.1, "lon": 1.51}, {'station':24, 'reachtime':102200, "lat": 35.1, "lon": 3.51}, ] })
+quit
+db.stationtimes.insert({'trip':123, 'start':300, 'end': 600, 'times'[ { 'station':Daraluwa, 'reachtime':100218, 'lat':7.09354, 'lon':79.99370 }, { 'station':Bemmulla, 'reachtime':100218, 'lat':7.10712, 'lon':80.01048 }, { 'station':Magalegoda, 'reachtime':100218, 'lat':7.12252, 'lon':80.02040 }, { 'station':Heendeniya Pattiyagoda, 'reachtime':100218, 'lat':7.13390, 'lon':80.03625 }, { 'station':Veyangoda, 'reachtime':100218, 'lat':7.14115, 'lon':80.04699 }, { 'station':Wadurawa, 'reachtime':100218, 'lat':7.15249, 'lon':80.05842 }] })
+cls
+show databases
+show database
+show dbs
+use honeydb
+db.stationtimes.insert({'trip':123, 'start':300, 'end': 600, 'times'[ { 'station':Daraluwa, 'reachtime':100218, 'lat':7.09354, 'lon':79.99370 }, { 'station':Bemmulla, 'reachtime':100218, 'lat':7.10712, 'lon':80.01048 }, { 'station':Magalegoda, 'reachtime':100218, 'lat':7.12252, 'lon':80.02040 }, { 'station':Heendeniya Pattiyagoda, 'reachtime':100218, 'lat':7.13390, 'lon':80.03625 }, { 'station':Veyangoda, 'reachtime':100218, 'lat':7.14115, 'lon':80.04699 }, { 'station':Wadurawa, 'reachtime':100218, 'lat':7.15249, 'lon':80.05842 }] })
+db.stationtimes.insert({'trip':123, 'start':300, 'end': 600, 'times' : [ { 'station':Daraluwa, 'reachtime':100218, 'lat':7.09354, 'lon':79.99370 }, { 'station':Bemmulla, 'reachtime':100218, 'lat':7.10712, 'lon':80.01048 }, { 'station':Magalegoda, 'reachtime':100218, 'lat':7.12252, 'lon':80.02040 }, { 'station':Heendeniya Pattiyagoda, 'reachtime':100218, 'lat':7.13390, 'lon':80.03625 }, { 'station':Veyangoda, 'reachtime':100218, 'lat':7.14115, 'lon':80.04699 }, { 'station':Wadurawa, 'reachtime':100218, 'lat':7.15249, 'lon':80.05842 }] })
+db.stationtimes.insert({'trip':123, 'start':300, 'end': 600, 'times' : [ { 'station':Daraluwa, 'reachtime':100218, 'lat':7.09354, 'lon':79.99370 }, { 'station':Bemmulla, 'reachtime':100218, 'lat':7.10712, 'lon':80.01048 }, { 'station':Magalegoda, 'reachtime':100218, 'lat':7.12252, 'lon':80.02040 }, { 'station':Heendeniya-Pattiyagoda, 'reachtime':100218, 'lat':7.13390, 'lon':80.03625 }, { 'station':Veyangoda, 'reachtime':100218, 'lat':7.14115, 'lon':80.04699 }, { 'station':Wadurawa, 'reachtime':100218, 'lat':7.15249, 'lon':80.05842 }] })
+db.stationtimes.insert({'trip':123, 'start':300, 'end': 600, 'times' : [ { 'station':'Daraluwa', 'reachtime':100218, 'lat':7.09354, 'lon':79.99370 }, { 'station':'Bemmulla', 'reachtime':100218, 'lat':7.10712, 'lon':80.01048 }, { 'station':'Magalegoda', 'reachtime':100218, 'lat':7.12252, 'lon':80.02040 }, { 'station':'Heendeniya-Pattiyagoda', 'reachtime':100218, 'lat':7.13390, 'lon':80.03625 }, { 'station':'Veyangoda', 'reachtime':100218, 'lat':7.14115, 'lon':80.04699 }, { 'station':'Wadurawa', 'reachtime':100218, 'lat':7.15249, 'lon':80.05842 }] })
+db.data.insert({'trip':123, 'lat':7.09354, 'lon':79.99370, 'prev':'Gampaha', 'next':'Daraluwa', 'time':100218})
+db.data.insert({'trip':123, 'lat':7.10712, 'lon':80.01048, 'prev':'Daraluwa', 'next':'Bemmulla', 'time':100218})
+db.data.insert({'trip':123, 'lat':7.12252, 'lon':80.02040, 'prev':'Bemmulla', 'next':'Magalegoda', 'time':100218})
+db.data.insert({'trip':123, 'lat':7.13390, 'lon':80.03625, 'prev':'Magalegoda', 'next':'Heendeniya Pattiyagoda', 'time':100218})
+db.data.insert({'trip':123, 'lat':7.14115, 'lon':80.04699, 'prev':'Heendeniya Pattiyagoda', 'next':'Veyangoda', 'time':100218})
+db.data.insert({'trip':123, 'lat':7.15249, 'lon':80.05842, 'prev':'Veyangoda', 'next':'Wadurawa', 'time':100218})
+db.imeitrip.insert({"imei":12345671,"starting":300,"ending":600,"tripid":123})
+quit
+wxit
+eit

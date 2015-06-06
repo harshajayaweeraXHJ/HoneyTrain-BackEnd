@@ -1,0 +1,468 @@
+imeitrip
+{
+    "imei":12345,
+    "starting":927,
+    "ending":1134,
+    "tripid":123
+}
+
+
+stationtimes
+data
+
+db.stationtimes.insert({'trip':123,'station':1, 'reachtime':926})
+db.stationtimes.insert({'trip':234,'station':1, 'reachtime':926})
+db.stationtimes.insert({'trip':345,'station':1, 'reachtime':926})
+
+
+
+db.stationtimes.insert({'trip':345,'times':[{'station':1, 'reachtime':926},{'station':2, 'reachtime':1026},{'station':3, 'reachtime':1126},{'station':4, 'reachtime':1226}]})
+
+{
+    'trip':345,
+    'times':{
+        {'station':1, 'reachtime':926},
+        {'station':2, 'reachtime':1026},
+        {'station':3, 'reachtime':1126},
+        {'station':4, 'reachtime':1226}
+    }
+}
+
+{'trip':345,'times':[{'station':1, 'reachtime':926},{'station':2, 'reachtime':1026},{'station':3, 'reachtime':1126},{'station':4, 'reachtime':1226}]}
+
+
+
+db.imeitrip.insert({"imei":12345,"starting":927,"ending":1134,"tripid":123})
+db.imeitrip.insert({"imei":12345,"starting":1400,"ending":1600,"tripid":234})
+db.imeitrip.insert({"imei":56789,"starting":1000,"ending":1200,"tripid":345})
+
+
+
+db.data.insert({'trip':123, 'lat':7.34, 'lon':79.23, 'prev':12, 'next':14, 'time':100218})
+db.data.insert({'trip':234, 'lat':7.34, 'lon':79.23, 'prev':12, 'next':14, 'time':100218})
+
+db.data.insert({'trip':456, 'lat':7.34, 'lon':79.23, 'prev':12, 'next':14, 'time':100218})
+
+
+
+db.data.insert({'trip':456, 'lat':7.34, 'lon':79.23, 'prev':12, 'next':14, 'time':100218})
+
+12345,7.879,79.678,2014,12,19,10,24,15,30.78,300.890
+12345,79.65,3.5667,2010,10,11,4,12,32,32,32.98
+
+for select query with time
+db.imeitrip.find({'imei':12345,'starting':{$gt:900},'ending':{$lt:1300}},{'imei':1,'_id':0})
+
+to delete all in a collection
+db.stationtimes.remove({})
+
+
+
+{
+	"trip" : 856,
+	"lat" : 7.34,
+	"lon" : 79.23,
+	"prev" : 12,
+	"next" : 14,
+	"time" : 1002
+},
+{
+	"trip" : 123,
+	"lat" : 7.34,
+	"lon" : 79.23,
+	"prev" : 12,
+	"next" : 14,
+	"time" : 100218
+},
+{
+	"trip" : 234,
+	"lat" : 7.34,
+	"lon" : 79.23,
+	"prev" : 12,
+	"next" : 14,
+	"time" : 100218
+},
+{
+	"trip" : 456,
+	"lat" : 7.34,
+	"lon" : 79.23,
+	"prev" : 12,
+	"next" : 14,
+	"time" : 100218
+},
+////////////////////////////////////////////////////////////////
+
+{
+	"trip" : 11,
+	"index" : 1,
+	"lat" : 1,
+	"lon" : 0.1,
+	"prev" : 20,
+	"next" : 21,
+	"time" : 100220
+}
+{
+	"trip" : 11,
+	"index" : 2,
+	"lat" : 2,
+	"lon" : 0.2,
+	"prev" : 20,
+	"next" : 21,
+	"time" : 100320
+}
+{
+	"trip" : 11,
+	"index" : 3,
+	"lat" : 3,
+	"lon" : 0.3,
+	"prev" : 20,
+	"next" : 21,
+	"time" : 100420
+}
+{
+	"trip" : 11,
+	"index" : 4,
+	"lat" : 4,
+	"lon" : 0.4,
+	"prev" : 20,
+	"next" : 21,
+	"time" : 100520
+}
+{
+	"trip" : 11,
+	"index" : 5,
+	"lat" : 5,
+	"lon" : 0.5,
+	"prev" : 20,
+	"next" : 21,
+	"time" : 100620
+}
+//////////////////////////////
+{
+	"trip" : 11,
+	"index" : 11,
+	"lat" : 6,
+	"lon" : 0.6,
+	"prev" : 21,
+	"next" : 22,
+	"time" : 100720
+}
+{
+	"trip" : 11,
+	"index" : 12,
+	"lat" : 7,
+	"lon" : 0.7,
+	"prev" : 21,
+	"next" : 22,
+	"time" : 100820
+}
+{
+	"trip" : 11,
+	"index" : 13,
+	"lat" : 8,
+	"lon" : 0.8,
+	"prev" : 21,
+	"next" : 22,
+	"time" : 100920
+}
+{
+	"trip" : 11,
+	"index" : 14,
+	"lat" : 9,
+	"lon" : 0.9,
+	"prev" : 21,
+	"next" : 22,
+	"time" : 101020
+}
+{
+	"trip" : 11,
+	"index" : 15,
+	"lat" : 10,
+	"lon" : 1.0,
+	"prev" : 21,
+	"next" : 22,
+	"time" : 101120
+}
+
+//////////////////////////////
+{
+	"trip" : 11,
+	"index" : 21,
+	"lat" : 11,
+	"lon" : 1.1,
+	"prev" : 22,
+	"next" : 23,
+	"time" : 101220
+}
+{
+	"trip" : 11,
+	"index" : 22,
+	"lat" : 12,
+	"lon" : 1.2,
+	"prev" : 22,
+	"next" : 23,
+	"time" : 101320
+}
+{
+	"trip" : 11,
+	"index" : 23,
+	"lat" : 13,
+	"lon" : 1.3,
+	"prev" : 22,
+	"next" : 23,
+	"time" : 101420
+}
+{
+	"trip" : 11,
+	"index" : 24,
+	"lat" : 14,
+	"lon" : 1.4,
+	"prev" : 22,
+	"next" : 23,
+	"time" : 101520
+}
+{
+	"trip" : 11,
+	"index" : 25,
+	"lat" : 15,
+	"lon" : 1.5,
+	"prev" : 22,
+	"next" : 23,
+	"time" : 101620
+}
+//////////////////////////////
+{
+	"trip" : 11,
+	"index" : 31,
+	"lat" : 31,
+	"lon" : 3.1,
+	"prev" : 23,
+	"next" : 24,
+	"time" : 101720
+}
+{
+	"trip" : 11,
+	"index" : 32,
+	"lat" : 32,
+	"lon" : 3.2,
+	"prev" : 23,
+	"next" : 24,
+	"time" : 101820
+}
+{
+	"trip" : 11,
+	"index" : 33,
+	"lat" : 33,
+	"lon" : 3.3,
+	"prev" : 23,
+	"next" : 24,
+	"time" : 101920
+}
+{
+	"trip" : 11,
+	"index" : 34,
+	"lat" : 34,
+	"lon" : 3.4,
+	"prev" : 23,
+	"next" : 24,
+	"time" : 102020
+}
+{
+	"trip" : 11,
+	"index" : 35,
+	"lat" : 35,
+	"lon" : 3.5,
+	"prev" : 23,
+	"next" : 24,
+	"time" : 102120
+}
+
+
+
+///////////////////////////////////////////////////
+making input data
+
+////////////////////////////////////////////////////////////////
+
+[{
+	"trip" : 11,
+	"index" : 1,
+	"lat" : 1,
+	"lon" : 0.1,
+	"prev" : 20,
+	"next" : 21,
+	"time" : 100220
+},{
+	"trip" : 11,
+	"index" : 2,
+	"lat" : 2,
+	"lon" : 0.2,
+	"prev" : 20,
+	"next" : 21,
+	"time" : 100320
+},{
+	"trip" : 11,
+	"index" : 3,
+	"lat" : 3,
+	"lon" : 0.3,
+	"prev" : 20,
+	"next" : 21,
+	"time" : 100420
+},{
+	"trip" : 11,
+	"index" : 4,
+	"lat" : 4,
+	"lon" : 0.4,
+	"prev" : 20,
+	"next" : 21,
+	"time" : 100520
+},{
+	"trip" : 11,
+	"index" : 5,
+	"lat" : 5,
+	"lon" : 0.5,
+	"prev" : 20,
+	"next" : 21,
+	"time" : 100620
+},{
+	"trip" : 11,
+	"index" : 11,
+	"lat" : 6,
+	"lon" : 0.6,
+	"prev" : 21,
+	"next" : 22,
+	"time" : 100720
+},{
+	"trip" : 11,
+	"index" : 12,
+	"lat" : 7,
+	"lon" : 0.7,
+	"prev" : 21,
+	"next" : 22,
+	"time" : 100820
+},{
+	"trip" : 11,
+	"index" : 13,
+	"lat" : 8,
+	"lon" : 0.8,
+	"prev" : 21,
+	"next" : 22,
+	"time" : 100920
+},{
+	"trip" : 11,
+	"index" : 14,
+	"lat" : 9,
+	"lon" : 0.9,
+	"prev" : 21,
+	"next" : 22,
+	"time" : 101020
+},{
+	"trip" : 11,
+	"index" : 15,
+	"lat" : 10,
+	"lon" : 1.0,
+	"prev" : 21,
+	"next" : 22,
+	"time" : 101120
+},{
+	"trip" : 11,
+	"index" : 21,
+	"lat" : 11,
+	"lon" : 1.1,
+	"prev" : 22,
+	"next" : 23,
+	"time" : 101220
+},{
+	"trip" : 11,
+	"index" : 22,
+	"lat" : 12,
+	"lon" : 1.2,
+	"prev" : 22,
+	"next" : 23,
+	"time" : 101320
+},{
+	"trip" : 11,
+	"index" : 23,
+	"lat" : 13,
+	"lon" : 1.3,
+	"prev" : 22,
+	"next" : 23,
+	"time" : 101420
+},{
+	"trip" : 11,
+	"index" : 24,
+	"lat" : 14,
+	"lon" : 1.4,
+	"prev" : 22,
+	"next" : 23,
+	"time" : 101520
+},{
+	"trip" : 11,
+	"index" : 25,
+	"lat" : 15,
+	"lon" : 1.5,
+	"prev" : 22,
+	"next" : 23,
+	"time" : 101620
+},{
+	"trip" : 11,
+	"index" : 31,
+	"lat" : 31,
+	"lon" : 3.1,
+	"prev" : 23,
+	"next" : 24,
+	"time" : 101720
+},{
+	"trip" : 11,
+	"index" : 32,
+	"lat" : 32,
+	"lon" : 3.2,
+	"prev" : 23,
+	"next" : 24,
+	"time" : 101820
+},{
+	"trip" : 11,
+	"index" : 33,
+	"lat" : 33,
+	"lon" : 3.3,
+	"prev" : 23,
+	"next" : 24,
+	"time" : 101920
+},{
+	"trip" : 11,
+	"index" : 34,
+	"lat" : 34,
+	"lon" : 3.4,
+	"prev" : 23,
+	"next" : 24,
+	"time" : 102020
+},{
+	"trip" : 11,
+	"index" : 35,
+	"lat" : 35,
+	"lon" : 3.5,
+	"prev" : 23,
+	"next" : 24,
+	"time" : 102120
+}]
+
+
+
+db.imeitrip.insert({"imei":12345678,"starting":900,"ending":1100,"tripid":11})
+
+
+
+db.stationtimes.insert({
+                           'trip':11,
+                           'start':20,
+                           'end': 24,
+                           'times':[
+                               {'station':21, 'reachtime':100700, "lat": 5.1, "lon": 0.51},
+                               {'station':22, 'reachtime':101200, "lat": 10.1, "lon": 1.1},
+                               {'station':23, 'reachtime':101700, "lat": 15.1, "lon": 1.51},
+                               {'station':24, 'reachtime':102200, "lat": 35.1, "lon": 3.51},
+                           ]
+                       })
+
+
+

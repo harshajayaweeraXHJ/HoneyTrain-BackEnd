@@ -1,0 +1,36 @@
+<html>
+<head>
+	<title>Socket Test Client</title>
+
+	<script src="/socket.io/socket.io.js"></script>
+	<script src="../test/testDataSet.js"></script>
+
+	<script>
+		var socket = io('http://localhost:6969');
+		console.log("array length is: " + dataArray.length);
+		var Index = 0;
+		setInterval(function(){
+			socket.emit('modtestemit',dataArray[Index]);
+			Index++;	
+
+			},5000); 
+
+		
+		 
+		  
+		 
+		    
+		    
+		  
+	
+
+	</script>
+		
+</head>
+
+<body>
+
+
+
+</body>
+</html>
